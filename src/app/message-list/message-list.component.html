@@ -1,5 +1,5 @@
-<div>
+<div class="chatlist" #chatlist>
   <ul>
-    <app-message-item *ngFor="let msg of messages" [message]="msg"></app-message-item>
+    <app-message-item *ngFor="let msg of messages" [message]=msg></app-message-item>
   </ul>
 </div>

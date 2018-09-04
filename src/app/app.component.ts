@@ -11,11 +11,12 @@ export class AppComponent {
   title = 'widget';
   public message : Message;
   public messages : Message[];
+  
 
   constructor(){
-    this.message = new Message('', 'assets/images/user.png');
+    this.message = new Message('Hi');
     this.messages = [
-      new Message('Welcome to chatbot universe', 'assets/images/bot.png', new Date())
+      new Message('Welcome to chatbot universe', new Date())
     ];
   }
 }
