@@ -1,4 +1,8 @@
-<div>
-  <input type="text" [(ngModel)]="message.content" (keyup.enter)="sendMessage()"/>
-  <button (click)="sendMessage()">Send</button>
+<div class="chatcontrol">
+ <div id="chat-window">
+       <div id="output"></div>
+ </div>
+  <input class="form-control chatinput" type="text" [(ngModel)]="message.content" (keyup.enter)="sendMessage()"/>
+  <!-- <button (click)="startVoice()">Audio</button> -->
+  <button class="btn btn-success sendbtn" (click)="sendMessage()">Send</button>
 </div>

@@ -20,11 +20,10 @@ export class ReplyService {
 
   getReply(query : string): Observable<ReplyMessage>{
     let data = {text:query};
-    console.log(data);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'responseType': 'blob'
+        'responseType': 'text'
       })
     };
     return this.http.post<ReplyMessage>(this._url, data, httpOptions);

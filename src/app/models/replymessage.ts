@@ -1,5 +1,5 @@
 export interface ReplyMessage {
-    content: string;
+    fulfillmentText: string;
 
     // constructor(content:string){
     //     this.content = content;

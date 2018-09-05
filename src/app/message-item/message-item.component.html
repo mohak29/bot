@@ -1,8 +1,8 @@
-<li>
-  <div>
+<li class="list-group-item">
+  <div class="message">
     {{message.content}}
   </div>
-  <div>
-    <span>at {{message.timestamp | date:'dd/MM/yyyy'}}</span>
+  <div class="timeform">
+    <i class="material-icons">access_time</i><span class="timestamp"> at {{message.timestamp | date:'dd/MM/yyyy'}}</span>
   </div>
 </li>

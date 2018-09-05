@@ -1,0 +1,43 @@
+.chatcontrol{
+  float: left;
+  width: 100%;
+
+  .chatinput{
+    width: 60%;
+    float: left;
+    border-radius: 0;
+  }
+
+  .sendbtn{
+    width: 20%;
+    float: left;
+    border-radius: 5;
+    border-color: white;
+    text-transform: uppercase;
+  }
+
+}
+
+input{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #808080;
+    border: 0;
+    display: inline-block;
+    width: 50%;
+    background: #fff;
+    border: 3px solid #000000;
+    font-family: Nunito;
+    font-size: 16px;
+}
+button{
+    background: #000000;
+     display: block;
+     float:right;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 12px 0;
+    width: 20%;
+    border-radius: 0 0 4px 4px;
+}

@@ -5,7 +5,7 @@ import { Message } from './models/message'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'widget';
@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(){
     this.message = new Message('Hi');
     this.messages = [
-      new Message('Welcome to chatbot universe', new Date())
+      new Message('Welcome to Mohak\'s bot', new Date())
     ];
   }
 }

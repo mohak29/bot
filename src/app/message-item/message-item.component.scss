@@ -1,0 +1,26 @@
+.message {
+    font-family: Nunito;
+    font-size: 16px;
+  /* font-size: 1em; */
+  font-style: italic;
+  font-weight: 400;
+}
+
+.timeform {
+  float: right;
+  width: 100%;
+
+  i {
+    margin-left: 20px;
+    font-size: 15px;
+  }
+
+  .timestamp{
+    font-size: 0.8em;
+  }
+}
+
+.avatar{
+  width: 50px;
+  margin-right: 20px;
+}
