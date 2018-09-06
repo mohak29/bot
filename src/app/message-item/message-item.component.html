@@ -1,5 +1,5 @@
 <li class="list-group-item">
-  <div class="message">
+  <div class="message"   [class.sent]="id == 'received'">
     {{message.content}}
   </div>
   <div class="timeform">

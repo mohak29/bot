@@ -14,6 +14,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class ReplyService {
 
   private _url: string = "http://localhost:3000/hi";
+  id : string;
 
 
   constructor(private http : HttpClient) { }
@@ -27,6 +28,14 @@ export class ReplyService {
       })
     };
     return this.http.post<ReplyMessage>(this._url, data, httpOptions);
+  }
+
+  setter(i : string){
+    this.id = i;
+  }
+
+  getter(){
+    return this.id;
   }
 
   

@@ -15,13 +15,17 @@ export class MessageFormComponent implements OnInit ,  OnDestroy {
 
   speechData: string;
   voice : boolean;
+  id : string;
+  
   @Input() private message : Message;
   @Input() private messages : Message[];
+
    
   constructor(private _reply : ReplyService, private speechRecognitionService: SpeechRecognitionService) {
     this.speechData = "";
     this.voice = false;
    }
+  
   
   ngOnInit() {}
   startVoice(): void {
@@ -55,12 +59,16 @@ export class MessageFormComponent implements OnInit ,  OnDestroy {
   public sendMessage(): void {    
     
     this.message.timestamp = new Date();
-    if(this.message.content)
-    this.messages.push(this.message);
-    
+    if(this.message.content){
+      this._reply.setter('sent');
+      this.id = this._reply.getter();
+      this.messages.push(this.message);      
+    }
 
     this._reply.getReply(this.message.content)
         .subscribe(res => {
+          this._reply.setter('received');
+          this.id = this._reply.getter();
           this.messages.push(
             new Message(res.fulfillmentText, new Date())
           );
